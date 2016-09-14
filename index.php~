@@ -1,0 +1,29 @@
+<?php
+/**
+  * Archivo   : index.php
+  * Type      : Controlador frontal
+  * Function  : Punto de entrada a la aplicacion
+  *             Ejempo 4 MVC
+  *             Lista de contacto
+  */
+
+
+if(! empty($_GET['cnt'])){
+	$controllername = $_GET['cnt'];
+	} else {
+	 $controllername = "Contacto";
+}
+
+$controllerpath = 'controladores/'. $controllername . '.php';
+
+if(!empty($_get['act'])) {
+	$actionname = $_GET['act'];
+  } else {
+	$actionname = "inicio";
+}
+
+ require $controllerpath;
+
+$controller = new $controllername;
+$controller->$actionname();
+?>
