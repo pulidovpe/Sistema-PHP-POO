@@ -8,7 +8,7 @@
 ?>
 
 	<footer>
-		<article id="centro">
+		<article id="centro_contenedor">
 		</article>
 	</footer>
 </body>

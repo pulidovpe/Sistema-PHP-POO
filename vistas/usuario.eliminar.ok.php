@@ -41,5 +41,5 @@
 		</article>
 	</section>
 	<article id="usuarios">   
-		<label><?php echo "Usuario: ".$userNombre; ?></label>
+		<label><?php echo "<strong>Usuario:</strong> ".$userNombre; ?></label>
 	</article>

@@ -61,5 +61,5 @@ $sesion = "index.php?cnt=Sesion&act=conecta";
 		</article>
 	</section>
 	<article id="usuarios">   
-		<label><?php echo "Usuario: ..." ?></label>
+		<label><?php echo "<strong>Usuario:</strong> ..." ?></label>
 	</article>
