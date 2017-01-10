@@ -6,8 +6,9 @@ class modeloUsuario {
 
 	public function __CONSTRUCT()
 	{
+		require_once "inc/dbConnect.php";
 		try {
-			$this->pdo = new PDO('mysql:host=localhost;dbname=sistema_php_poo', 'root', '123456');
+			$this->pdo = new PDO('mysql:host='.$hostname.';dbname='.$database, $username, $password);
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch(Exception $e) {
 			die($e->getMessage());
