@@ -10,20 +10,14 @@ class Usuario
 	// Metodo del paginador para iniciar e ir a la primera pagina
 	public function inicio() {  
 
-		require "inc/variables.php";
-		require "clases/classVista.php";
-		require "modelo/modeloUsuario.php";
-		// conexion a la base de datos
-		////require "inc/dbConnect.php";
-		
+		require_once "inc/variables.php";
+		require_once "clases/classVista.php";
+		require_once "modelo/modeloUsuario.php";		
 		
 		// LECTURA DE LA TABLA usuario
 		$oUsuario = new modeloUsuario();
 		$rs = $oUsuario->leerTodo(0,$mostrarReg);
 		
-		//print_r($rs);
-		//exit();
-
 		//Transforma el resultado $rs en un arreglo asociativo
 		/*$item = array();
 		while ($rows = $rs) 
@@ -67,11 +61,11 @@ class Usuario
 	// Metodo del paginador para ir a la ultima pagina
 	public function fin() {  
 
-		require "clases/classVista.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"modelo/modeloUsuario.php";
 		// conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 		
 		// LECTURA DE LA TABLA usuario
 		$oUsuario = new modeloUsuario();
@@ -118,11 +112,9 @@ class Usuario
 	// Metodo del paginador para avanzar 1 registro
 	public function adelante() {  
 
-		require "clases/classVista.php";
-		require "modelo/modeloUsuario.php";
-		// conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		require_once"clases/classVista.php";
+		require_once"modelo/modeloUsuario.php";
+		require_once"inc/variables.php";
 
 		// Lectura de la pagina solicitada desde el formulario
 		foreach ($_GET as $datoRecibido => $valor) {
@@ -178,11 +170,11 @@ class Usuario
 	// Metodo del paginador para retroceder 1 registro
 	public function atras() {  
 
-		require "clases/classVista.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"modelo/modeloUsuario.php";
 		// conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura de la pagina solicitada desde el formulario
 		foreach ($_GET as $datoRecibido => $valor) {
@@ -239,8 +231,8 @@ class Usuario
 	// Incluir Usuarios//
 	function incluir() {
 
-		require "clases/classVista.php";
-		require "inc/variables.php";
+		require_once"clases/classVista.php";
+		require_once"inc/variables.php";
 
 		// Parametros de la Vista
 		$aTitulos['t3']             = $aNomMod['m01'];
@@ -289,12 +281,12 @@ class Usuario
 	// Incluir 2
 	function grabar() {
 
-		require "clases/classVista.php";
-		require "clases/classValidar.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"clases/classValidar.php";
+		require_once"modelo/modeloUsuario.php";
 		// Conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura de datos del formulario
 		foreach ($_POST as $datoRecibido => $valor) {
@@ -373,12 +365,12 @@ class Usuario
 	// Modificar Usuario
 	function modificar() {
 
-		require "clases/classVista.php";
-		require "clases/classValidar.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"clases/classValidar.php";
+		require_once"modelo/modeloUsuario.php";
 		// Conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura del ID del formulario
 		foreach ($_GET as $datoRecibido => $valor) {
@@ -455,12 +447,12 @@ class Usuario
 	// Modificar2
 	function regrabar() {
 
-		require "clases/classVista.php";
-		require "clases/classValidar.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"clases/classValidar.php";
+		require_once"modelo/modeloUsuario.php";
 		// Conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura de datos del formulario
 		foreach ($_POST as $datoRecibido => $valor) {
@@ -536,11 +528,11 @@ class Usuario
 	// Eliminar
 	function eliminar() {
 
-		require "clases/classVista.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"modelo/modeloUsuario.php";
 		// Conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura del ID del formulario
 		foreach ($_GET as $datoRecibido => $valor) {
@@ -620,12 +612,12 @@ class Usuario
 	// Eliminar2
 	function borrar() {
 
-		require "clases/classVista.php";
-		require "clases/classValidar.php";
-		require "modelo/modeloUsuario.php";
+		require_once"clases/classVista.php";
+		require_once"clases/classValidar.php";
+		require_once"modelo/modeloUsuario.php";
 		// Conexion a la base de datos
-		////require "inc/dbConnect.php";
-		require "inc/variables.php";
+		////require_once"inc/dbConnect.php";
+		require_once"inc/variables.php";
 
 		// Lectura de datos del formulario
 		foreach ($_POST as $datoRecibido => $valor) {

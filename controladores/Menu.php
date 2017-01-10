@@ -9,8 +9,8 @@
 		// Inicio
 		function inicio()
 		{
-			require "inc/variables.php";
-			require "clases/classVista.php";
+			require_once"inc/variables.php";
+			require_once"clases/classVista.php";
 
 			$datos["aTitulos"]	= $aTitulos;
 			session_start();

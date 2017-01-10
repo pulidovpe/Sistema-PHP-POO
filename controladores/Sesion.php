@@ -12,8 +12,8 @@ class Sesion {
 	//  INICIO  ///
 	public function inicio() {
 
-		require "clases/classVista.php";
-		require "inc/variables.php";
+		require_once"clases/classVista.php";
+		require_once"inc/variables.php";
 
 		$aTitulos['t3']           = "Iniciar Sesión";
 		$datos['aTitulos']        = $aTitulos;
@@ -29,13 +29,10 @@ class Sesion {
 	*/
 	function conecta() {
 
-		//Conexion a la base de datos
-		//require "inc/dbConnect.php";
-		//require "inc/usuario.entidad.php";
-		require "inc/variables.php";
+		require_once "inc/variables.php";
 		// LOAD FILES
-		require "modelo/modeloUsuario.php";
-		require "clases/classVista.php";
+		require_once "modelo/modeloUsuario.php";
+		require_once "clases/classVista.php";
 
 		// SESSION VARIABLES
 		$userNombre 	= "";
@@ -59,28 +56,24 @@ class Sesion {
 		// Transforma el resultado en un arreglo asociativo
 		if (!empty($rs) ) 
 		{
-			//while ($rows = mysql_fetch_array($rs)) 
-			//foreach($rs as $r):
-			//{
-				$descrip  = $rs['descrip_usu'];
-				$clave    = $rs['clave_usu'];
-				$activo   = $rs['activo'];
-				$S_MOD01  = $rs['modulo01'];
-				$S_MOD02  = $rs['modulo02'];
-				$S_MOD03  = $rs['modulo03'];
-				$S_MOD04  = $rs['modulo04'];
-				$S_MOD05  = $rs['modulo05'];
-				$S_MOD06  = $rs['modulo06'];
-				$S_MOD07  = $rs['modulo07'];
-				$S_MOD08  = $rs['modulo08'];
-				$S_MOD09  = $rs['modulo09'];
-				$S_MOD10  = $rs['modulo10'];
-				$S_MOD11  = $rs['modulo11'];
-				$S_MOD12  = $rs['modulo12'];
-				$S_MOD13  = $rs['modulo13'];
-				$S_MOD14  = $rs['modulo14'];
-				$S_MOD15  = $rs['modulo15'];
-			//}
+			$descrip  = $rs['descrip_usu'];
+			$clave    = $rs['clave_usu'];
+			$activo   = $rs['activo'];
+			$S_MOD01  = $rs['modulo01'];
+			$S_MOD02  = $rs['modulo02'];
+			$S_MOD03  = $rs['modulo03'];
+			$S_MOD04  = $rs['modulo04'];
+			$S_MOD05  = $rs['modulo05'];
+			$S_MOD06  = $rs['modulo06'];
+			$S_MOD07  = $rs['modulo07'];
+			$S_MOD08  = $rs['modulo08'];
+			$S_MOD09  = $rs['modulo09'];
+			$S_MOD10  = $rs['modulo10'];
+			$S_MOD11  = $rs['modulo11'];
+			$S_MOD12  = $rs['modulo12'];
+			$S_MOD13  = $rs['modulo13'];
+			$S_MOD14  = $rs['modulo14'];
+			$S_MOD15  = $rs['modulo15'];
 		}
 
 		// parametros para la vista 
@@ -160,8 +153,8 @@ class Sesion {
 	// Conectado
 	function conectado() {
 		// Carga de archivos/librerias       
-		require "clases/classVista.php";
-		require "inc/variables.php";
+		require_once"clases/classVista.php";
+		require_once"inc/variables.php";
 
 		// parametros para la vista 
 		$aTitulos['t3']           = "Menú Principal";
@@ -193,9 +186,9 @@ class Sesion {
 	// Desconectar
 	function desconecta($cual = null) {
 		// LOAD FILES
-		require "modelo/modeloUsuario.php";       
-		require "clases/classVista.php";
-		require "inc/variables.php";
+		require_once"modelo/modeloUsuario.php";       
+		require_once"clases/classVista.php";
+		require_once"inc/variables.php";
 
 		// parametros para la vista 
 		$aTitulos['t3']			= "Cierre de Sesión";
@@ -211,9 +204,9 @@ class Sesion {
 	// Desconeccion por inactividad
 	function cierreforzado() {
 		// LOAD FILES
-		require "modelo/modeloUsuario.php";       
-		require "clases/classVista.php";
-		require "inc/variables.php";
+		require_once"modelo/modeloUsuario.php";       
+		require_once"clases/classVista.php";
+		require_once"inc/variables.php";
 
 		// parametros para la vista 
 		$aTitulos['t3']			= "Cierre de Sesión";
