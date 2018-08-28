@@ -14,13 +14,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `sistema_php_poo`
 --
 DROP DATABASE IF EXISTS `sistema_php_poo`;
-CREATE DATABASE `sistema_php_poo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE `sistema_php_poo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `sistema_php_poo`;
 
 -- --------------------------------------------------------
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `modulo14` enum('L','E','X') NOT NULL DEFAULT 'X',
   `modulo15` enum('L','E','X') NOT NULL DEFAULT 'X',
   PRIMARY KEY (`id_usu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
