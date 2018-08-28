@@ -5,7 +5,7 @@
   */
 
 	$hostname = "localhost";
-	$username = "sysadmin";
+	$username = "root";
 	$password = "123456";
 	$database = "sistema_php_poo";
 	
